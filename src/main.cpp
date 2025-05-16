@@ -9,7 +9,7 @@ double getCurrentTime() {
 int main() {
   std::srand(std::time(0));
   std::vector<int> train_lengths;
-  for (int n = 100; n <= 1500; n += 100) {
+  for (int n = 500; n <= 10000; n += 500) {
     train_lengths.push_back(n);
   }
   std::cout << "Length | All off | Time off | All on | Time on | Random | Time random\n";
@@ -32,9 +32,9 @@ int main() {
     int ops_rand = train_rand.getLength();
     double time_rand = getCurrentTime() - start_rand;
     int count_rand = train_rand.getOpCount();
-    std::cout << n << "\t" << count_off << "\t" << round(time_off * 1000) / 1000 << " ms\t"
-      << count_on << "\t" << round(time_on * 1000) / 1000 << " ms\t"
-      << count_rand << "\t" << round(time_rand * 1000) / 1000 << " ms\n";
+    std::cout << n << "\t" << count_off << "\t" << time_off << " ms\t"
+      << count_on << "\t" << time_on << " ms\t"
+      << count_rand << "\t" << time_rand << " ms\n";
   }
   return 0;
 }
