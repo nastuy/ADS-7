@@ -1,7 +1,7 @@
 // Copyright 2021 NNTU-CS
-#include "train.h"
 #include <cstdlib>
 #include <ctime>
+#include "train.h"
 Train::Train() : countOp(0), first(nullptr) {
   std::srand(std::time(0));
 }
