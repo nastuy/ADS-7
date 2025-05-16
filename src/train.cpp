@@ -26,11 +26,6 @@ int Train::getLength() {
     return 1;
   countOp = 0;
   Car* current = first;
-  int randomSteps = std::rand() % 10;
-  for (int i = 0; i < randomSteps; i++) {
-    current = current->next;
-    countOp++;
-  }
   current->light = true;
   countOp++;
   Car* startCar = current;
