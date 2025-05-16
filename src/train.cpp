@@ -23,10 +23,9 @@ int Train::getLength() {
   if (!first->light) {
     first->light = true;
   }
-  int steps = 0;
   Car* current = first;
   while (true) {
-    steps = 0;
+    int steps = 0;
     do {
       current = current->next;
       steps++;
