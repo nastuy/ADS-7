@@ -1,8 +1,8 @@
 // Copyright 2022 NNTU-CS
-#include "train.h"
 #include <iostream>
 #include <vector>
 #include <ctime>
+#include "train.h"
 double getCurrentTime() {
   return static_cast<double>(std::clock()) / CLOCKS_PER_SEC * 1000;
 }
